@@ -27,10 +27,20 @@ namespace Ch8tter
 
             Debug.WriteLine("HTTP Request: "+request);
 
-            //send the request, get a response
-            HttpResponseMessage response = await httpClient.GetAsync(request);
+            try
+            {
+                //send the request, get a response
+                HttpResponseMessage response = await httpClient.GetAsync(request);
+                
+                Debug.WriteLine(response.ToString());
 
-            Debug.WriteLine(response.ToString());
+                Debug.WriteLine(await response.Content.ReadAsStringAsync());
+            }
+            catch (HttpRequestException hre)
+            {
+                Debug.WriteLine(hre.Message);
+            }
+            
         }
     }
 }
