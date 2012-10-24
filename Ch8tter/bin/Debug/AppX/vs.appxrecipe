@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>FUSE</Machine>
+    <WindowsUser>Tom</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>2D2F6B06F736EC90542B5041AD861503E38FD9671E76C448C87C8DBE0E67FD0A</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>21561c7c-85e7-4330-bb17-ef8d0a3e697f_1.0.0.0_neutral__kp1tw81z64n68</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>21561c7c-85e7-4330-bb17-ef8d0a3e697f_kp1tw81z64n68!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>21561c7c-85e7-4330-bb17-ef8d0a3e697f</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Tom</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-10-24T00:52:23.758</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.exe">
+      <PackagePath>Ch8tter.exe</PackagePath>
+      <Modified>2012-10-24T00:52:23.589</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.pdb">
+      <PackagePath>Ch8tter.pdb</PackagePath>
+      <Modified>2012-10-24T00:52:23.562</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T03:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T03:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T03:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T03:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2012-10-24T00:52:14.768</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2012-06-26T23:19:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+      <Modified>2012-10-24T00:52:14.811</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2012-10-24T00:52:23.676</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
