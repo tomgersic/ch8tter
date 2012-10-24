@@ -16,17 +16,17 @@
     <AppXManifest Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-10-24T00:52:23.758</Modified>
+      <Modified>2012-10-24T03:16:03.081</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.exe">
       <PackagePath>Ch8tter.exe</PackagePath>
-      <Modified>2012-10-24T00:52:23.589</Modified>
+      <Modified>2012-10-24T03:20:03.793</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.pdb">
       <PackagePath>Ch8tter.pdb</PackagePath>
-      <Modified>2012-10-24T00:52:23.562</Modified>
+      <Modified>2012-10-24T03:20:03.764</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>

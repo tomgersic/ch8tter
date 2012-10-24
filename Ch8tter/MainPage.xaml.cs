@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Diagnostics;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -33,6 +34,9 @@ namespace Ch8tter
         /// property is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            Debug.WriteLine("Main Page Navigated To");
+            SFDCRestApi sfdcRest = new SFDCRestApi();
+            sfdcRest.Request("GET", "chatter/feeds/news/me/feed-items");
         }
     }
 }
