@@ -7,44 +7,47 @@
     <PackageArchitecture>neutral</PackageArchitecture>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.exe">
+    <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.exe">
       <PackagePath>Ch8tter.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.pdb">
+    <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.pdb">
       <PackagePath>Ch8tter.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\Assets\Logo.png">
+    <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\Assets\SmallLogo.png">
+    <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\Assets\SplashScreen.png">
+    <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\App.xaml">
+    <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Common\StandardStyles.xaml">
-      <PackagePath>Common\StandardStyles.xaml</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\MainPage.xaml">
+    <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

@@ -112,7 +112,9 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
             }
         }
 
-        private object Activate_0_MainPage() { return new global::Ch8tter.MainPage(); }
+        private object Activate_0_LayoutAwarePage() { return new global::Ch8tter.Common.LayoutAwarePage(); }
+
+        private object Activate_1_MainPage() { return new global::Ch8tter.MainPage(); }
 
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(string typeName)
@@ -130,9 +132,15 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
                 xamlType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.Controls.UserControl));
                 break;
 
+            case "Ch8tter.Common.LayoutAwarePage":
+                userType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Ch8tter.Common.LayoutAwarePage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_0_LayoutAwarePage;
+                xamlType = userType;
+                break;
+
             case "Ch8tter.MainPage":
-                userType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Ch8tter.MainPage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+                userType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Ch8tter.MainPage), GetXamlTypeByName("Ch8tter.Common.LayoutAwarePage"));
+                userType.Activator = Activate_1_MainPage;
                 xamlType = userType;
                 break;
 

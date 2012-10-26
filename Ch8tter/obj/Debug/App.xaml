@@ -14,7 +14,7 @@
                  -->
                 <ResourceDictionary Source="Common/StandardStyles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-
+            <x:String x:Key="AppName">ch8tter</x:String>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
