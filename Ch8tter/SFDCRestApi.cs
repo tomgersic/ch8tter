@@ -12,6 +12,8 @@ namespace Ch8tter
     {
         private HttpClient httpClient;
 
+
+
         public async void Request(String method, String path)
         {
             httpClient = new HttpClient();
