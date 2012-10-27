@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.exe">
       <PackagePath>Ch8tter.exe</PackagePath>
-      <Modified>2012-10-27T16:15:19.412</Modified>
+      <Modified>2012-10-27T16:24:53.373</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.pdb">
       <PackagePath>Ch8tter.pdb</PackagePath>
-      <Modified>2012-10-27T16:15:19.127</Modified>
+      <Modified>2012-10-27T16:24:53.308</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -58,7 +58,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2012-10-27T16:13:26.325</Modified>
+      <Modified>2012-10-27T16:24:50.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>

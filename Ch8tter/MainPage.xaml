@@ -58,7 +58,8 @@
             Padding="120,0,0,60"
             ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
             IsSwipeEnabled="False"
-            SelectionChanged="ItemListView_SelectionChanged">
+            SelectionChanged="ItemListView_SelectionChanged"
+            >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
