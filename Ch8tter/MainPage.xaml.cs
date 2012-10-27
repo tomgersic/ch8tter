@@ -38,8 +38,9 @@ namespace Ch8tter
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             Debug.WriteLine("Main Page Navigated To");
-            /*SFDCRestApi sfdcRest = new SFDCRestApi();
-            sfdcRest.Request("GET", "chatter/feeds/news/me/feed-items");*/
+            SFDCRestApi sfdcRest = new SFDCRestApi();
+            sfdcRest.GenerateDummyData();
+            /*sfdcRest.Request("GET", "chatter/feeds/news/me/feed-items");*/
         }
 
 
