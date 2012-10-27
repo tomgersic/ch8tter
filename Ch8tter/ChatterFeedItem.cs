@@ -10,6 +10,8 @@ namespace Ch8tter
     {
         public string Id { get; set; }
         public string AuthorName { get; set; }
+        public string Title { get; set; }
+        public string GroupName { get; set; }
         public string Content { get; set; }
         public string CreatedDate { get; set; }
         public Uri Link { get; set; }

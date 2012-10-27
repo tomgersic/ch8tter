@@ -198,6 +198,12 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
                 userType.AddMemberName("AuthorName");
                 AddToMapOfTypeToStandardName(typeof(global::System.String),
                                                    "String");
+                userType.AddMemberName("Title");
+                AddToMapOfTypeToStandardName(typeof(global::System.String),
+                                                   "String");
+                userType.AddMemberName("GroupName");
+                AddToMapOfTypeToStandardName(typeof(global::System.String),
+                                                   "String");
                 userType.AddMemberName("Content");
                 AddToMapOfTypeToStandardName(typeof(global::System.String),
                                                    "String");
@@ -260,32 +266,52 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
             var that = (global::Ch8tter.ChatterFeedItem)instance;
             that.AuthorName = (global::System.String)Value;
         }
-        private object get_3_ChatterFeedItem_Content(object instance)
+        private object get_3_ChatterFeedItem_Title(object instance)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            return that.Title;
+        }
+        private void set_3_ChatterFeedItem_Title(object instance, object Value)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            that.Title = (global::System.String)Value;
+        }
+        private object get_4_ChatterFeedItem_GroupName(object instance)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            return that.GroupName;
+        }
+        private void set_4_ChatterFeedItem_GroupName(object instance, object Value)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            that.GroupName = (global::System.String)Value;
+        }
+        private object get_5_ChatterFeedItem_Content(object instance)
         {
             var that = (global::Ch8tter.ChatterFeedItem)instance;
             return that.Content;
         }
-        private void set_3_ChatterFeedItem_Content(object instance, object Value)
+        private void set_5_ChatterFeedItem_Content(object instance, object Value)
         {
             var that = (global::Ch8tter.ChatterFeedItem)instance;
             that.Content = (global::System.String)Value;
         }
-        private object get_4_ChatterFeedItem_CreatedDate(object instance)
+        private object get_6_ChatterFeedItem_CreatedDate(object instance)
         {
             var that = (global::Ch8tter.ChatterFeedItem)instance;
             return that.CreatedDate;
         }
-        private void set_4_ChatterFeedItem_CreatedDate(object instance, object Value)
+        private void set_6_ChatterFeedItem_CreatedDate(object instance, object Value)
         {
             var that = (global::Ch8tter.ChatterFeedItem)instance;
             that.CreatedDate = (global::System.String)Value;
         }
-        private object get_5_ChatterFeedItem_Link(object instance)
+        private object get_7_ChatterFeedItem_Link(object instance)
         {
             var that = (global::Ch8tter.ChatterFeedItem)instance;
             return that.Link;
         }
-        private void set_5_ChatterFeedItem_Link(object instance, object Value)
+        private void set_7_ChatterFeedItem_Link(object instance, object Value)
         {
             var that = (global::Ch8tter.ChatterFeedItem)instance;
             that.Link = (global::System.Uri)Value;
@@ -316,23 +342,35 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
                 xamlMember.Getter = get_2_ChatterFeedItem_AuthorName;
                 xamlMember.Setter = set_2_ChatterFeedItem_AuthorName;
                 break;
+            case "Ch8tter.ChatterFeedItem.Title":
+                userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItem");
+                xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "Title", "String");
+                xamlMember.Getter = get_3_ChatterFeedItem_Title;
+                xamlMember.Setter = set_3_ChatterFeedItem_Title;
+                break;
+            case "Ch8tter.ChatterFeedItem.GroupName":
+                userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItem");
+                xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "GroupName", "String");
+                xamlMember.Getter = get_4_ChatterFeedItem_GroupName;
+                xamlMember.Setter = set_4_ChatterFeedItem_GroupName;
+                break;
             case "Ch8tter.ChatterFeedItem.Content":
                 userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItem");
                 xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "Content", "String");
-                xamlMember.Getter = get_3_ChatterFeedItem_Content;
-                xamlMember.Setter = set_3_ChatterFeedItem_Content;
+                xamlMember.Getter = get_5_ChatterFeedItem_Content;
+                xamlMember.Setter = set_5_ChatterFeedItem_Content;
                 break;
             case "Ch8tter.ChatterFeedItem.CreatedDate":
                 userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItem");
                 xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "CreatedDate", "String");
-                xamlMember.Getter = get_4_ChatterFeedItem_CreatedDate;
-                xamlMember.Setter = set_4_ChatterFeedItem_CreatedDate;
+                xamlMember.Getter = get_6_ChatterFeedItem_CreatedDate;
+                xamlMember.Setter = set_6_ChatterFeedItem_CreatedDate;
                 break;
             case "Ch8tter.ChatterFeedItem.Link":
                 userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItem");
                 xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "Link", "System.Uri");
-                xamlMember.Getter = get_5_ChatterFeedItem_Link;
-                xamlMember.Setter = set_5_ChatterFeedItem_Link;
+                xamlMember.Getter = get_7_ChatterFeedItem_Link;
+                xamlMember.Setter = set_7_ChatterFeedItem_Link;
                 break;
             }
             return xamlMember;

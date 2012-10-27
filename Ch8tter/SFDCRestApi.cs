@@ -19,14 +19,15 @@ namespace Ch8tter
             {
                 ChatterFeedItem feedItem1 = new ChatterFeedItem();
                 feedItem1.Id = "sdfkldjskldfsjhkdfshj";
-                feedItem1.Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam";
+                feedItem1.Title = feedItem1.Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam";
                 feedItem1.AuthorName = "Barack Obama";
+                feedItem1.GroupName = "Mobile";
                 feedItem1.CreatedDate = "2012-10-01T16:24:29.000Z";
                 chatterFeedDataSource.Items.Add(feedItem1);
 
                 ChatterFeedItem feedItem2 = new ChatterFeedItem();
                 feedItem2.Id = "dsfdfsf32sdfsdfdsf";
-                feedItem2.Content = "Test Test Test Test";
+                feedItem2.Title = feedItem2.Content = "Test Test Test Test";
                 feedItem2.AuthorName = "Harry Houdini";
                 feedItem2.CreatedDate = "2012-10-01T16:24:29.000Z";
                 chatterFeedDataSource.Items.Add(feedItem2);

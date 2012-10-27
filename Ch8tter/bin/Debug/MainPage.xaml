@@ -58,8 +58,20 @@
             Padding="120,0,0,60"
             ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
             IsSwipeEnabled="False"
-                                                            
-            ItemTemplate="{StaticResource Standard130ItemTemplate}"/>
+                                                            >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Title}"  
+                           FontSize="16" Margin="5,0,0,0" TextWrapping="Wrap" />
+                        <TextBlock Text="{Binding AuthorName}" 
+                           FontSize="12" Margin="15,0,0,0"/>
+                        <TextBlock Text="{Binding CreatedDate}" 
+                           FontSize="12" Margin="15,0,0,0"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
         <!-- Details for selected item -->
         <ScrollViewer
@@ -84,8 +96,8 @@
 
                 <Image Grid.Row="1" Margin="0,0,20,0" Width="180" Height="180" Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
                 <StackPanel x:Name="itemDetailTitlePanel" Grid.Row="1" Grid.Column="1">
-                    <TextBlock x:Name="itemTitle" Margin="0,-10,0,0" Text="{Binding Title}" Style="{StaticResource SubheaderTextStyle}"/>
-                    <TextBlock x:Name="itemSubtitle" Margin="0,0,0,20" Text="{Binding Subtitle}" Style="{StaticResource SubtitleTextStyle}"/>
+                    <TextBlock x:Name="itemTitle" Margin="0,-10,0,0" Text="{Binding AuthorName}" Style="{StaticResource SubheaderTextStyle}"/>
+                    <TextBlock x:Name="itemSubtitle" Margin="0,0,0,20" Text="{Binding GroupName}" Style="{StaticResource SubtitleTextStyle}"/>
                 </StackPanel>
                 <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Margin="0,20,0,0" Text="{Binding Content}" Style="{StaticResource BodyTextStyle}"/>
             </Grid>
