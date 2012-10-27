@@ -25,3 +25,6 @@ c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\obj\Debug\res
 c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\obj\Debug\pri.resfiles
 c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\obj\Debug\LanguageQualifiers.txt
 c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\obj\Debug\ProjectArchitectures.txt
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\obj\Debug\Resources\Colors.g.i.cs
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\obj\Debug\Resources\Colors.g.cs
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\obj\Debug\Resources\Colors.xaml
