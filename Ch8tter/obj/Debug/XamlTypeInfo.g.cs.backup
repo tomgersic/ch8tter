@@ -112,9 +112,31 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
             }
         }
 
-        private object Activate_0_LayoutAwarePage() { return new global::Ch8tter.Common.LayoutAwarePage(); }
+        private object Activate_0_ChatterFeedDataSource() { return new global::Ch8tter.ChatterFeedDataSource(); }
 
-        private object Activate_1_MainPage() { return new global::Ch8tter.MainPage(); }
+        private object Activate_1_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Ch8tter.ChatterFeedItem>(); }
+
+        private object Activate_2_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Ch8tter.ChatterFeedItem>(); }
+
+        private object Activate_3_ChatterFeedItem() { return new global::Ch8tter.ChatterFeedItem(); }
+
+        private object Activate_5_LayoutAwarePage() { return new global::Ch8tter.Common.LayoutAwarePage(); }
+
+        private object Activate_6_MainPage() { return new global::Ch8tter.MainPage(); }
+
+        private void VectorAdd_1_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Ch8tter.ChatterFeedItem>)instance;
+            var newItem = (global::Ch8tter.ChatterFeedItem)item;
+            collection.Add(newItem);
+        }
+
+        private void VectorAdd_2_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Ch8tter.ChatterFeedItem>)instance;
+            var newItem = (global::Ch8tter.ChatterFeedItem)item;
+            collection.Add(newItem);
+        }
 
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(string typeName)
@@ -124,6 +146,14 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
 
             switch (typeName)
             {
+            case "Object":
+                xamlType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::System.Object));
+                break;
+
+            case "String":
+                xamlType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::System.String));
+                break;
+
             case "Windows.UI.Xaml.Controls.Page":
                 xamlType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.Controls.Page));
                 break;
@@ -132,15 +162,66 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
                 xamlType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.Controls.UserControl));
                 break;
 
+            case "Ch8tter.ChatterFeedDataSource":
+                userType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Ch8tter.ChatterFeedDataSource), GetXamlTypeByName("Object"));
+                userType.Activator = Activate_0_ChatterFeedDataSource;
+                userType.AddMemberName("Items");
+                AddToMapOfTypeToStandardName(typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Ch8tter.ChatterFeedItem>),
+                                                   "System.Collections.ObjectModel.ObservableCollection<Ch8tter.ChatterFeedItem>");
+                xamlType = userType;
+                break;
+
+            case "System.Collections.ObjectModel.ObservableCollection<Ch8tter.ChatterFeedItem>":
+                userType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Ch8tter.ChatterFeedItem>), GetXamlTypeByName("System.Collections.ObjectModel.Collection<Ch8tter.ChatterFeedItem>"));
+                AddToMapOfTypeToStandardName(typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Ch8tter.ChatterFeedItem>),
+                                                   "System.Collections.ObjectModel.ObservableCollection<Ch8tter.ChatterFeedItem>");
+                userType.Activator = Activate_1_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_1_ObservableCollection;
+                xamlType = userType;
+                break;
+
+            case "System.Collections.ObjectModel.Collection<Ch8tter.ChatterFeedItem>":
+                userType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::System.Collections.ObjectModel.Collection<global::Ch8tter.ChatterFeedItem>), GetXamlTypeByName("Object"));
+                AddToMapOfTypeToStandardName(typeof(global::System.Collections.ObjectModel.Collection<global::Ch8tter.ChatterFeedItem>),
+                                                   "System.Collections.ObjectModel.Collection<Ch8tter.ChatterFeedItem>");
+                userType.Activator = Activate_2_Collection;
+                userType.CollectionAdd = VectorAdd_2_Collection;
+                xamlType = userType;
+                break;
+
+            case "Ch8tter.ChatterFeedItem":
+                userType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Ch8tter.ChatterFeedItem), GetXamlTypeByName("Object"));
+                userType.Activator = Activate_3_ChatterFeedItem;
+                userType.AddMemberName("Id");
+                AddToMapOfTypeToStandardName(typeof(global::System.String),
+                                                   "String");
+                userType.AddMemberName("AuthorName");
+                AddToMapOfTypeToStandardName(typeof(global::System.String),
+                                                   "String");
+                userType.AddMemberName("Content");
+                AddToMapOfTypeToStandardName(typeof(global::System.String),
+                                                   "String");
+                userType.AddMemberName("CreatedDate");
+                AddToMapOfTypeToStandardName(typeof(global::System.String),
+                                                   "String");
+                userType.AddMemberName("Link");
+                xamlType = userType;
+                break;
+
+            case "System.Uri":
+                userType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::System.Uri), GetXamlTypeByName("Object"));
+                xamlType = userType;
+                break;
+
             case "Ch8tter.Common.LayoutAwarePage":
                 userType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Ch8tter.Common.LayoutAwarePage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_LayoutAwarePage;
+                userType.Activator = Activate_5_LayoutAwarePage;
                 xamlType = userType;
                 break;
 
             case "Ch8tter.MainPage":
                 userType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Ch8tter.MainPage), GetXamlTypeByName("Ch8tter.Common.LayoutAwarePage"));
-                userType.Activator = Activate_1_MainPage;
+                userType.Activator = Activate_6_MainPage;
                 xamlType = userType;
                 break;
 
@@ -149,11 +230,111 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
         }
 
 
+        private object get_0_ChatterFeedDataSource_Items(object instance)
+        {
+            var that = (global::Ch8tter.ChatterFeedDataSource)instance;
+            return that.Items;
+        }
+        private void set_0_ChatterFeedDataSource_Items(object instance, object Value)
+        {
+            var that = (global::Ch8tter.ChatterFeedDataSource)instance;
+            that.Items = (global::System.Collections.ObjectModel.ObservableCollection<global::Ch8tter.ChatterFeedItem>)Value;
+        }
+        private object get_1_ChatterFeedItem_Id(object instance)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            return that.Id;
+        }
+        private void set_1_ChatterFeedItem_Id(object instance, object Value)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            that.Id = (global::System.String)Value;
+        }
+        private object get_2_ChatterFeedItem_AuthorName(object instance)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            return that.AuthorName;
+        }
+        private void set_2_ChatterFeedItem_AuthorName(object instance, object Value)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            that.AuthorName = (global::System.String)Value;
+        }
+        private object get_3_ChatterFeedItem_Content(object instance)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            return that.Content;
+        }
+        private void set_3_ChatterFeedItem_Content(object instance, object Value)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            that.Content = (global::System.String)Value;
+        }
+        private object get_4_ChatterFeedItem_CreatedDate(object instance)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            return that.CreatedDate;
+        }
+        private void set_4_ChatterFeedItem_CreatedDate(object instance, object Value)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            that.CreatedDate = (global::System.String)Value;
+        }
+        private object get_5_ChatterFeedItem_Link(object instance)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            return that.Link;
+        }
+        private void set_5_ChatterFeedItem_Link(object instance, object Value)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            that.Link = (global::System.Uri)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "Ch8tter.ChatterFeedDataSource.Items":
+                userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedDataSource");
+                xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "Items", "System.Collections.ObjectModel.ObservableCollection<Ch8tter.ChatterFeedItem>");
+                xamlMember.Getter = get_0_ChatterFeedDataSource_Items;
+                xamlMember.Setter = set_0_ChatterFeedDataSource_Items;
+                break;
+            case "Ch8tter.ChatterFeedItem.Id":
+                userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItem");
+                xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "Id", "String");
+                xamlMember.Getter = get_1_ChatterFeedItem_Id;
+                xamlMember.Setter = set_1_ChatterFeedItem_Id;
+                break;
+            case "Ch8tter.ChatterFeedItem.AuthorName":
+                userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItem");
+                xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "AuthorName", "String");
+                xamlMember.Getter = get_2_ChatterFeedItem_AuthorName;
+                xamlMember.Setter = set_2_ChatterFeedItem_AuthorName;
+                break;
+            case "Ch8tter.ChatterFeedItem.Content":
+                userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItem");
+                xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "Content", "String");
+                xamlMember.Getter = get_3_ChatterFeedItem_Content;
+                xamlMember.Setter = set_3_ChatterFeedItem_Content;
+                break;
+            case "Ch8tter.ChatterFeedItem.CreatedDate":
+                userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItem");
+                xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "CreatedDate", "String");
+                xamlMember.Getter = get_4_ChatterFeedItem_CreatedDate;
+                xamlMember.Setter = set_4_ChatterFeedItem_CreatedDate;
+                break;
+            case "Ch8tter.ChatterFeedItem.Link":
+                userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItem");
+                xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "Link", "System.Uri");
+                xamlMember.Getter = get_5_ChatterFeedItem_Link;
+                xamlMember.Setter = set_5_ChatterFeedItem_Link;
+                break;
+            }
             return xamlMember;
         }
 

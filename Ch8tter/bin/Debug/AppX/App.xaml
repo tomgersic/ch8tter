@@ -13,6 +13,10 @@
                     Required by Visual Studio project and item templates
                  -->
                 <ResourceDictionary Source="Common/StandardStyles.xaml"/>
+                <ResourceDictionary>
+                    <local:ChatterFeedDataSource x:Key="chatterFeedDataSource"/>
+                </ResourceDictionary>
+
             </ResourceDictionary.MergedDictionaries>
             <x:String x:Key="AppName">ch8tter</x:String>
         </ResourceDictionary>

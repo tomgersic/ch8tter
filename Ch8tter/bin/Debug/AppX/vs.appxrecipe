@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-10-26T00:16:40.543</Modified>
+      <Modified>2012-10-27T14:20:49.579</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.exe">
       <PackagePath>Ch8tter.exe</PackagePath>
-      <Modified>2012-10-26T00:36:48.724</Modified>
+      <Modified>2012-10-27T15:33:14.605</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.pdb">
       <PackagePath>Ch8tter.pdb</PackagePath>
-      <Modified>2012-10-26T00:36:48.628</Modified>
+      <Modified>2012-10-27T15:33:14.466</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -54,7 +54,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
-      <Modified>2012-10-26T00:33:56.576</Modified>
+      <Modified>2012-10-27T14:03:13.209</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>

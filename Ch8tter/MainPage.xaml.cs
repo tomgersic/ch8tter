@@ -40,6 +40,10 @@ namespace Ch8tter
             Debug.WriteLine("Main Page Navigated To");
             SFDCRestApi sfdcRest = new SFDCRestApi();
             sfdcRest.GenerateDummyData();
+
+            ChatterFeedDataSource chatterFeedDataSource = (ChatterFeedDataSource)App.Current.Resources["chatterFeedDataSource"];
+
+            this.DefaultViewModel["Items"] = chatterFeedDataSource.Items;
             /*sfdcRest.Request("GET", "chatter/feeds/news/me/feed-items");*/
         }
 
