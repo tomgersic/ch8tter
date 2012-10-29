@@ -173,10 +173,10 @@
             <SolidColorBrush x:Key="ListViewItemOverlaySecondaryForegroundThemeBrush" Color="#99FFFFFF" />
             <SolidColorBrush x:Key="ListViewItemPlaceholderBackgroundThemeBrush" Color="#FF3D3D3D" />
             <SolidColorBrush x:Key="ListViewItemPointerOverBackgroundThemeBrush" Color="#4DFFFFFF" />
-            <SolidColorBrush x:Key="ListViewItemSelectedBackgroundThemeBrush" Color="#FFC1F6FB" />
+            <SolidColorBrush x:Key="ListViewItemSelectedBackgroundThemeBrush" Color="#FFE8E8E8" />
             <SolidColorBrush x:Key="ListViewItemSelectedForegroundThemeBrush" Color="#FFFFFFFF" />
             <SolidColorBrush x:Key="ListViewItemSelectedPointerOverBackgroundThemeBrush" Color="#FFE5FEFF" />
-            <SolidColorBrush x:Key="ListViewItemSelectedPointerOverBorderThemeBrush" Color="#FFAEE8E3" />
+            <SolidColorBrush x:Key="ListViewItemSelectedPointerOverBorderThemeBrush" Color="#FFE6E6E6" />
             <SolidColorBrush x:Key="ProgressBarBackgroundThemeBrush" Color="#59FFFFFF" />
             <SolidColorBrush x:Key="ProgressBarBorderThemeBrush" Color="Transparent" />
             <SolidColorBrush x:Key="ProgressBarForegroundThemeBrush" Color="#FF5B2EC5" />
@@ -796,10 +796,10 @@
             <SolidColorBrush x:Key="ListViewItemOverlayForegroundThemeBrush" Color="#FFFFFFFF" />
             <SolidColorBrush x:Key="ListViewItemPlaceholderBackgroundThemeBrush" Color="#FF3D3D3D" />
             <SolidColorBrush x:Key="ListViewItemPointerOverBackgroundThemeBrush" Color="#4D000000" />
-            <SolidColorBrush x:Key="ListViewItemSelectedBackgroundThemeBrush" Color="#FFC8FFFF" />
+            <SolidColorBrush x:Key="ListViewItemSelectedBackgroundThemeBrush" Color="#FFE6E6E6" />
             <SolidColorBrush x:Key="ListViewItemSelectedForegroundThemeBrush" Color="#FF000000" />
-            <SolidColorBrush x:Key="ListViewItemSelectedPointerOverBackgroundThemeBrush" Color="#FFD1F2F5" />
-            <SolidColorBrush x:Key="ListViewItemSelectedPointerOverBorderThemeBrush" Color="#FFB9E8EA" />
+            <SolidColorBrush x:Key="ListViewItemSelectedPointerOverBackgroundThemeBrush" Color="#FFDEDEDE" />
+            <SolidColorBrush x:Key="ListViewItemSelectedPointerOverBorderThemeBrush" Color="#FFE8E8E8" />
             <SolidColorBrush x:Key="ProgressBarBackgroundThemeBrush" Color="#30000000" />
             <SolidColorBrush x:Key="ProgressBarBorderThemeBrush" Color="Transparent" />
             <SolidColorBrush x:Key="ProgressBarForegroundThemeBrush" Color="#FF4617B4" />

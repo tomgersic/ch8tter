@@ -44,7 +44,7 @@ namespace Ch8tter
             ChatterFeedDataSource chatterFeedDataSource = (ChatterFeedDataSource)App.Current.Resources["chatterFeedDataSource"];
 
             this.DefaultViewModel["Items"] = chatterFeedDataSource.Items;
-            /*sfdcRest.Request("GET", "chatter/feeds/news/me/feed-items");*/
+            sfdcRest.Request("GET", "chatter/feeds/news/me/feed-items");
         }
 
 
