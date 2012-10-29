@@ -46,7 +46,7 @@ namespace Ch8tter
         private async void LoadChatterFeed()
         {
             SFDCRestApi sfdcRest = new SFDCRestApi();
-            sfdcRest.GenerateDummyData();
+           // sfdcRest.GenerateDummyData();
 
             ChatterFeedDataSource chatterFeedDataSource = (ChatterFeedDataSource)App.Current.Resources["chatterFeedDataSource"];
 
@@ -59,6 +59,16 @@ namespace Ch8tter
             foreach (JObject itemObject in (JArray)responseObject["items"])
             {
                 Debug.WriteLine((string)itemObject["body"]["text"]);
+
+                ChatterFeedItem feedItem = new ChatterFeedItem();
+                feedItem.Id = (string)itemObject["id"];
+                feedItem.Content = (string)itemObject["body"]["text"];
+                feedItem.Title = StringUtil.TruncateAtWord(feedItem.Content, 50);
+                feedItem.AuthorName = (string)itemObject["actor"]["name"];
+                feedItem.GroupName = (string)itemObject["parent"]["name"];
+                feedItem.CreatedDate = ((DateTime)itemObject["createdDate"]).ToString();
+
+                chatterFeedDataSource.Items.Add(feedItem);
             }
 
             //Debug.WriteLine("stop here");

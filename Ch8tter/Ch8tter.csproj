@@ -118,6 +118,7 @@
     <Compile Include="JsonUtil.cs" />
     <Compile Include="SFDCRestApi.cs" />
     <Compile Include="SFDCSession.cs" />
+    <Compile Include="StringUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
