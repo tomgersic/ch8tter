@@ -16,17 +16,25 @@
     <AppXManifest Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-10-27T17:16:03.947</Modified>
+      <Modified>2012-10-29T02:38:13.983</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.exe">
       <PackagePath>Ch8tter.exe</PackagePath>
-      <Modified>2012-10-29T01:40:24.667</Modified>
+      <Modified>2012-10-29T03:03:35.065</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.pdb">
       <PackagePath>Ch8tter.pdb</PackagePath>
-      <Modified>2012-10-29T01:40:24.625</Modified>
+      <Modified>2012-10-29T03:03:35.024</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\packages\Newtonsoft.Json.4.5.10\lib\winrt45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2012-10-29T02:36:08.651</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\packages\Newtonsoft.Json.4.5.10\lib\winrt45\Newtonsoft.Json.xml">
+      <PackagePath>Newtonsoft.Json.xml</PackagePath>
+      <Modified>2012-10-29T02:36:08.662</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>

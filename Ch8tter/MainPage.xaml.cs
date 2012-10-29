@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Diagnostics;
+using Newtonsoft.Json.Linq;
 
 // The Split Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234234
 
@@ -38,15 +39,30 @@ namespace Ch8tter
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             Debug.WriteLine("Main Page Navigated To");
+
+            LoadChatterFeed();
+        }
+
+        private async void LoadChatterFeed()
+        {
             SFDCRestApi sfdcRest = new SFDCRestApi();
             sfdcRest.GenerateDummyData();
 
             ChatterFeedDataSource chatterFeedDataSource = (ChatterFeedDataSource)App.Current.Resources["chatterFeedDataSource"];
 
-            this.DefaultViewModel["Items"] = chatterFeedDataSource.Items;
-            sfdcRest.Request("GET", "chatter/feeds/news/me/feed-items");
-        }
+            this.DefaultViewModel["Items"] = chatterFeedDataSource.Items;          
 
+            JObject responseObject = await sfdcRest.Request("GET", "chatter/feeds/news/me/feed-items");
+
+            JArray responseItems = (JArray)responseObject["items"];
+
+            foreach (JObject itemObject in (JArray)responseObject["items"])
+            {
+                Debug.WriteLine((string)itemObject["body"]["text"]);
+            }
+
+            //Debug.WriteLine("stop here");
+        }
 
         #region Page state management
 

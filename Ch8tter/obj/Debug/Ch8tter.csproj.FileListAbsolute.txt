@@ -28,3 +28,7 @@ c:\users\tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\obj\Debug\Pro
 C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\obj\Debug\Resources\Colors.g.i.cs
 C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\obj\Debug\Resources\Colors.g.cs
 C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\obj\Debug\Resources\Colors.xaml
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\obj\Debug\Ch8tter.csprojResolveAssemblyReference.cache
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\obj\Debug\Ch8tter.csproj.GenerateResource.Cache

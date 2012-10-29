@@ -19,6 +19,12 @@
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.pdb">
       <PackagePath>Ch8tter.pdb</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\packages\Newtonsoft.Json.4.5.10\lib\winrt45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\packages\Newtonsoft.Json.4.5.10\lib\winrt45\Newtonsoft.Json.xml">
+      <PackagePath>Newtonsoft.Json.xml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>

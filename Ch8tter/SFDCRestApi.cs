@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Diagnostics;
+using System.IO;
+using System.Runtime.Serialization.Json;
+using System.Text;
+using Newtonsoft.Json.Linq;
 
 namespace Ch8tter
 {
@@ -34,7 +38,7 @@ namespace Ch8tter
             }
         }
 
-        public async void Request(String method, String path)
+        public async Task<JObject> Request(String method, String path)
         {
             httpClient = new HttpClient();
 
@@ -57,12 +61,14 @@ namespace Ch8tter
                 Debug.WriteLine(response.ToString());
 
                 Debug.WriteLine(await response.Content.ReadAsStringAsync());
+
+                return JObject.Parse(await response.Content.ReadAsStringAsync());
             }
             catch (HttpRequestException hre)
             {
                 Debug.WriteLine(hre.Message);
-            }
-            
+                return null;
+            }            
         }
     }
 }
