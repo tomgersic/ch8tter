@@ -71,8 +71,6 @@ namespace Ch8tter
 
                 chatterFeedDataSource.Items.Add(feedItem);
             }
-
-            //Debug.WriteLine("stop here");
         }
 
         #region Page state management

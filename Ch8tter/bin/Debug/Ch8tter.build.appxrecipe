@@ -41,6 +41,9 @@
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\Assets\mm.jpg">
+      <PackagePath>Assets\mm.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\Common\ReadMe.txt">
       <PackagePath>Common\ReadMe.txt</PackagePath>
     </AppxPackagedFile>

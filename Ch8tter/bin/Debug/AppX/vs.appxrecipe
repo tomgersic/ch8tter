@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-10-29T04:46:29.352</Modified>
+      <Modified>2012-10-29T05:11:11.293</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.exe">
       <PackagePath>Ch8tter.exe</PackagePath>
-      <Modified>2012-10-29T05:00:48.862</Modified>
+      <Modified>2012-10-29T05:11:49.738</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.pdb">
       <PackagePath>Ch8tter.pdb</PackagePath>
-      <Modified>2012-10-29T05:00:48.819</Modified>
+      <Modified>2012-10-29T05:11:49.701</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\packages\Newtonsoft.Json.4.5.10\lib\winrt45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -56,6 +56,10 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2012-03-16T03:42:52.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\Assets\mm.jpg">
+      <PackagePath>Assets\mm.jpg</PackagePath>
+      <Modified>2012-10-29T05:10:50.809</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\Common\ReadMe.txt">
       <PackagePath>Common\ReadMe.txt</PackagePath>
       <Modified>2012-10-26T00:12:16.402</Modified>
@@ -70,7 +74,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2012-10-29T04:52:40.785</Modified>
+      <Modified>2012-10-29T05:11:47.341</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
@@ -78,7 +82,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\Documents\Visual Studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-10-27T17:16:03.222</Modified>
+      <Modified>2012-10-29T05:11:11.172</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
