@@ -211,6 +211,9 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
                 AddToMapOfTypeToStandardName(typeof(global::System.String),
                                                    "String");
                 userType.AddMemberName("Link");
+                userType.AddMemberName("Image");
+                AddToMapOfTypeToStandardName(typeof(global::System.String),
+                                                   "String");
                 xamlType = userType;
                 break;
 
@@ -316,6 +319,16 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
             var that = (global::Ch8tter.ChatterFeedItem)instance;
             that.Link = (global::System.Uri)Value;
         }
+        private object get_8_ChatterFeedItem_Image(object instance)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            return that.Image;
+        }
+        private void set_8_ChatterFeedItem_Image(object instance, object Value)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            that.Image = (global::System.String)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -371,6 +384,12 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
                 xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "Link", "System.Uri");
                 xamlMember.Getter = get_7_ChatterFeedItem_Link;
                 xamlMember.Setter = set_7_ChatterFeedItem_Link;
+                break;
+            case "Ch8tter.ChatterFeedItem.Image":
+                userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItem");
+                xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "Image", "String");
+                xamlMember.Getter = get_8_ChatterFeedItem_Image;
+                xamlMember.Setter = set_8_ChatterFeedItem_Image;
                 break;
             }
             return xamlMember;

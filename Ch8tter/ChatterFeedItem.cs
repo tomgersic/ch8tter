@@ -15,5 +15,6 @@ namespace Ch8tter
         public string Content { get; set; }
         public string CreatedDate { get; set; }
         public Uri Link { get; set; }
+        public string Image { get; set; }
     }
 }

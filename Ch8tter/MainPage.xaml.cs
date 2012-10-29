@@ -67,6 +67,7 @@ namespace Ch8tter
                 feedItem.AuthorName = (string)itemObject["actor"]["name"];
                 feedItem.GroupName = (string)itemObject["parent"]["name"];
                 feedItem.CreatedDate = ((DateTime)itemObject["createdDate"]).ToString();
+                feedItem.Image = (string)itemObject["actor"]["photo"]["largePhotoUrl"]+"?oauth_token="+SFDCSession.Instance.AccessToken;
 
                 chatterFeedDataSource.Items.Add(feedItem);
             }
