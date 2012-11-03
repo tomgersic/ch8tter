@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Windows.Foundation;
+using Windows.Security.Authentication.Web;
 
 namespace Ch8tter
 {
@@ -15,6 +19,8 @@ namespace Ch8tter
         public String InstanceUrl = "https://na14.salesforce.com";
         public String ApiVersion = "v26.0";
         public String BasePath = "services/data";
+        public String ConsumerKey = "3MVG9rFJvQRVOvk45r5r6Nef.ZS37y44dr3lvAmkws6ZGGKK1oWgAQFITAkAcpdI3LNd22utrzvV.ObDuSwdB";
+        public String RedirectUri = "sfdc://success";
 
         private SFDCSession() { }
 
@@ -47,6 +53,18 @@ namespace Ch8tter
                 return InstanceUrl + "/" + BasePath + "/" + ApiVersion + "/";
             }
 
+        }
+
+        public async void oAuthUserAgentFlow()
+        {
+            Uri requestUri = new Uri("https://login.salesforce.com/services/oauth2/authorize?response_type=token&display=touch&client_id="+ConsumerKey+"&redirect_uri="+WebUtility.UrlEncode(RedirectUri));
+            Uri callbackUri = new Uri(RedirectUri);
+
+            WebAuthenticationResult webAuthenticationResult = await WebAuthenticationBroker.AuthenticateAsync(WebAuthenticationOptions.None, requestUri, callbackUri);
+            if (webAuthenticationResult.ResponseStatus == WebAuthenticationStatus.Success)
+            {
+                string token = webAuthenticationResult.ResponseData;
+            }             
         }
     }
 }

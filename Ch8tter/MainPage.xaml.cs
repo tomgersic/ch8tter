@@ -40,7 +40,9 @@ namespace Ch8tter
         {
             Debug.WriteLine("Main Page Navigated To");
 
-            LoadChatterFeed();
+            SFDCSession.Instance.oAuthUserAgentFlow();
+
+            //LoadChatterFeed();
         }
 
         private async void LoadChatterFeed()
