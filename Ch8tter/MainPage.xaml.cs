@@ -39,12 +39,19 @@ namespace Ch8tter
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             Debug.WriteLine("Main Page Navigated To");
-
-            SFDCSession.Instance.oAuthUserAgentFlow();
-
-            //LoadChatterFeed();
+            Initialize();
         }
 
+        private async void Initialize()
+        {
+            String accessToken = await SFDCSession.Instance.oAuthUserAgentFlow();
+
+            LoadChatterFeed();
+        }
+
+        /**
+         * Load the Chatter feed from the Chatter REST API, and add to the data source
+         **/
         private async void LoadChatterFeed()
         {
             SFDCRestApi sfdcRest = new SFDCRestApi();
