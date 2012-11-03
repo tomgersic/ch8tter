@@ -66,6 +66,11 @@ namespace Ch8tter
          **/
         public async Task<String> oAuthUserAgentFlow()
         {
+            if (AccessToken != "")
+            {
+                return AccessToken;
+            }
+
             Uri requestUri = new Uri("https://login.salesforce.com/services/oauth2/authorize?response_type=token&display=touch&client_id="+ConsumerKey+"&redirect_uri="+WebUtility.UrlEncode(RedirectUri));
             Uri callbackUri = new Uri(RedirectUri);
 
