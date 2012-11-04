@@ -77,6 +77,17 @@ namespace Ch8tter
                 feedItem.GroupName = (string)itemObject["parent"]["name"];
                 feedItem.CreatedDate = ((DateTime)itemObject["createdDate"]).ToString();
                 feedItem.Image = (string)itemObject["actor"]["photo"]["largePhotoUrl"]+"?oauth_token="+SFDCSession.Instance.AccessToken;
+                feedItem.Comments = new List<ChatterFeedItemComment>();
+                foreach (JObject commentObject in itemObject["comments"]["comments"])
+                {
+                    ChatterFeedItemComment feedItemComment = new ChatterFeedItemComment();
+                    feedItemComment.AuthorName = (string)commentObject["user"]["name"];
+                    feedItemComment.Id = (string)commentObject["id"];
+                    feedItemComment.Image = (string)commentObject["user"]["photo"]["largePhotoUrl"] + "?oauth_token=" + SFDCSession.Instance.AccessToken;
+                    feedItemComment.CreatedDate = ((DateTime)commentObject["createdDate"]).ToString();
+                    feedItemComment.Content = (string)commentObject["body"]["text"];
+                    feedItem.Comments.Add(feedItemComment);
+                }
 
                 chatterFeedDataSource.Items.Add(feedItem);
             }

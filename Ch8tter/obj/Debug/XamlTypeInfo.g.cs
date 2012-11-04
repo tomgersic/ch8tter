@@ -120,9 +120,13 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
 
         private object Activate_3_ChatterFeedItem() { return new global::Ch8tter.ChatterFeedItem(); }
 
-        private object Activate_5_LayoutAwarePage() { return new global::Ch8tter.Common.LayoutAwarePage(); }
+        private object Activate_5_List() { return new global::System.Collections.Generic.List<global::Ch8tter.ChatterFeedItemComment>(); }
 
-        private object Activate_6_MainPage() { return new global::Ch8tter.MainPage(); }
+        private object Activate_6_ChatterFeedItemComment() { return new global::Ch8tter.ChatterFeedItemComment(); }
+
+        private object Activate_7_LayoutAwarePage() { return new global::Ch8tter.Common.LayoutAwarePage(); }
+
+        private object Activate_8_MainPage() { return new global::Ch8tter.MainPage(); }
 
         private void VectorAdd_1_ObservableCollection(object instance, object item)
         {
@@ -135,6 +139,13 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Ch8tter.ChatterFeedItem>)instance;
             var newItem = (global::Ch8tter.ChatterFeedItem)item;
+            collection.Add(newItem);
+        }
+
+        private void VectorAdd_5_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Ch8tter.ChatterFeedItemComment>)instance;
+            var newItem = (global::Ch8tter.ChatterFeedItemComment)item;
             collection.Add(newItem);
         }
 
@@ -214,6 +225,9 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
                 userType.AddMemberName("Image");
                 AddToMapOfTypeToStandardName(typeof(global::System.String),
                                                    "String");
+                userType.AddMemberName("Comments");
+                AddToMapOfTypeToStandardName(typeof(global::System.Collections.Generic.List<global::Ch8tter.ChatterFeedItemComment>),
+                                                   "System.Collections.Generic.List<Ch8tter.ChatterFeedItemComment>");
                 xamlType = userType;
                 break;
 
@@ -222,15 +236,46 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
                 xamlType = userType;
                 break;
 
+            case "System.Collections.Generic.List<Ch8tter.ChatterFeedItemComment>":
+                userType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::System.Collections.Generic.List<global::Ch8tter.ChatterFeedItemComment>), GetXamlTypeByName("Object"));
+                AddToMapOfTypeToStandardName(typeof(global::System.Collections.Generic.List<global::Ch8tter.ChatterFeedItemComment>),
+                                                   "System.Collections.Generic.List<Ch8tter.ChatterFeedItemComment>");
+                userType.Activator = Activate_5_List;
+                userType.CollectionAdd = VectorAdd_5_List;
+                xamlType = userType;
+                break;
+
+            case "Ch8tter.ChatterFeedItemComment":
+                userType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Ch8tter.ChatterFeedItemComment), GetXamlTypeByName("Object"));
+                userType.Activator = Activate_6_ChatterFeedItemComment;
+                userType.AddMemberName("Id");
+                AddToMapOfTypeToStandardName(typeof(global::System.String),
+                                                   "String");
+                userType.AddMemberName("AuthorName");
+                AddToMapOfTypeToStandardName(typeof(global::System.String),
+                                                   "String");
+                userType.AddMemberName("Content");
+                AddToMapOfTypeToStandardName(typeof(global::System.String),
+                                                   "String");
+                userType.AddMemberName("CreatedDate");
+                AddToMapOfTypeToStandardName(typeof(global::System.String),
+                                                   "String");
+                userType.AddMemberName("Link");
+                userType.AddMemberName("Image");
+                AddToMapOfTypeToStandardName(typeof(global::System.String),
+                                                   "String");
+                xamlType = userType;
+                break;
+
             case "Ch8tter.Common.LayoutAwarePage":
                 userType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Ch8tter.Common.LayoutAwarePage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_LayoutAwarePage;
+                userType.Activator = Activate_7_LayoutAwarePage;
                 xamlType = userType;
                 break;
 
             case "Ch8tter.MainPage":
                 userType = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Ch8tter.MainPage), GetXamlTypeByName("Ch8tter.Common.LayoutAwarePage"));
-                userType.Activator = Activate_6_MainPage;
+                userType.Activator = Activate_8_MainPage;
                 xamlType = userType;
                 break;
 
@@ -329,6 +374,76 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
             var that = (global::Ch8tter.ChatterFeedItem)instance;
             that.Image = (global::System.String)Value;
         }
+        private object get_9_ChatterFeedItem_Comments(object instance)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            return that.Comments;
+        }
+        private void set_9_ChatterFeedItem_Comments(object instance, object Value)
+        {
+            var that = (global::Ch8tter.ChatterFeedItem)instance;
+            that.Comments = (global::System.Collections.Generic.List<global::Ch8tter.ChatterFeedItemComment>)Value;
+        }
+        private object get_10_ChatterFeedItemComment_Id(object instance)
+        {
+            var that = (global::Ch8tter.ChatterFeedItemComment)instance;
+            return that.Id;
+        }
+        private void set_10_ChatterFeedItemComment_Id(object instance, object Value)
+        {
+            var that = (global::Ch8tter.ChatterFeedItemComment)instance;
+            that.Id = (global::System.String)Value;
+        }
+        private object get_11_ChatterFeedItemComment_AuthorName(object instance)
+        {
+            var that = (global::Ch8tter.ChatterFeedItemComment)instance;
+            return that.AuthorName;
+        }
+        private void set_11_ChatterFeedItemComment_AuthorName(object instance, object Value)
+        {
+            var that = (global::Ch8tter.ChatterFeedItemComment)instance;
+            that.AuthorName = (global::System.String)Value;
+        }
+        private object get_12_ChatterFeedItemComment_Content(object instance)
+        {
+            var that = (global::Ch8tter.ChatterFeedItemComment)instance;
+            return that.Content;
+        }
+        private void set_12_ChatterFeedItemComment_Content(object instance, object Value)
+        {
+            var that = (global::Ch8tter.ChatterFeedItemComment)instance;
+            that.Content = (global::System.String)Value;
+        }
+        private object get_13_ChatterFeedItemComment_CreatedDate(object instance)
+        {
+            var that = (global::Ch8tter.ChatterFeedItemComment)instance;
+            return that.CreatedDate;
+        }
+        private void set_13_ChatterFeedItemComment_CreatedDate(object instance, object Value)
+        {
+            var that = (global::Ch8tter.ChatterFeedItemComment)instance;
+            that.CreatedDate = (global::System.String)Value;
+        }
+        private object get_14_ChatterFeedItemComment_Link(object instance)
+        {
+            var that = (global::Ch8tter.ChatterFeedItemComment)instance;
+            return that.Link;
+        }
+        private void set_14_ChatterFeedItemComment_Link(object instance, object Value)
+        {
+            var that = (global::Ch8tter.ChatterFeedItemComment)instance;
+            that.Link = (global::System.Uri)Value;
+        }
+        private object get_15_ChatterFeedItemComment_Image(object instance)
+        {
+            var that = (global::Ch8tter.ChatterFeedItemComment)instance;
+            return that.Image;
+        }
+        private void set_15_ChatterFeedItemComment_Image(object instance, object Value)
+        {
+            var that = (global::Ch8tter.ChatterFeedItemComment)instance;
+            that.Image = (global::System.String)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -390,6 +505,48 @@ namespace Ch8tter.Ch8tter_XamlTypeInfo
                 xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "Image", "String");
                 xamlMember.Getter = get_8_ChatterFeedItem_Image;
                 xamlMember.Setter = set_8_ChatterFeedItem_Image;
+                break;
+            case "Ch8tter.ChatterFeedItem.Comments":
+                userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItem");
+                xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "Comments", "System.Collections.Generic.List<Ch8tter.ChatterFeedItemComment>");
+                xamlMember.Getter = get_9_ChatterFeedItem_Comments;
+                xamlMember.Setter = set_9_ChatterFeedItem_Comments;
+                break;
+            case "Ch8tter.ChatterFeedItemComment.Id":
+                userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItemComment");
+                xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "Id", "String");
+                xamlMember.Getter = get_10_ChatterFeedItemComment_Id;
+                xamlMember.Setter = set_10_ChatterFeedItemComment_Id;
+                break;
+            case "Ch8tter.ChatterFeedItemComment.AuthorName":
+                userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItemComment");
+                xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "AuthorName", "String");
+                xamlMember.Getter = get_11_ChatterFeedItemComment_AuthorName;
+                xamlMember.Setter = set_11_ChatterFeedItemComment_AuthorName;
+                break;
+            case "Ch8tter.ChatterFeedItemComment.Content":
+                userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItemComment");
+                xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "Content", "String");
+                xamlMember.Getter = get_12_ChatterFeedItemComment_Content;
+                xamlMember.Setter = set_12_ChatterFeedItemComment_Content;
+                break;
+            case "Ch8tter.ChatterFeedItemComment.CreatedDate":
+                userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItemComment");
+                xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "CreatedDate", "String");
+                xamlMember.Getter = get_13_ChatterFeedItemComment_CreatedDate;
+                xamlMember.Setter = set_13_ChatterFeedItemComment_CreatedDate;
+                break;
+            case "Ch8tter.ChatterFeedItemComment.Link":
+                userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItemComment");
+                xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "Link", "System.Uri");
+                xamlMember.Getter = get_14_ChatterFeedItemComment_Link;
+                xamlMember.Setter = set_14_ChatterFeedItemComment_Link;
+                break;
+            case "Ch8tter.ChatterFeedItemComment.Image":
+                userType = (global::Ch8tter.Ch8tter_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ch8tter.ChatterFeedItemComment");
+                xamlMember = new global::Ch8tter.Ch8tter_XamlTypeInfo.XamlMember(this, "Image", "String");
+                xamlMember.Getter = get_15_ChatterFeedItemComment_Image;
+                xamlMember.Setter = set_15_ChatterFeedItemComment_Image;
                 break;
             }
             return xamlMember;

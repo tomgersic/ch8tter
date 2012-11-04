@@ -105,6 +105,7 @@
     </Compile>
     <Compile Include="ChatterFeedDataSource.cs" />
     <Compile Include="ChatterFeedItem.cs" />
+    <Compile Include="ChatterFeedItemComment.cs" />
     <Compile Include="Common\BindableBase.cs" />
     <Compile Include="Common\BooleanNegationConverter.cs" />
     <Compile Include="Common\BooleanToVisibilityConverter.cs" />
