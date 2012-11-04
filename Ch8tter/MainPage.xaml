@@ -379,6 +379,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -407,26 +408,25 @@
                     IsSwipeEnabled="False"
                     SelectionChanged="ItemListView_SelectionChanged" ItemContainerStyle="{StaticResource ListViewItemStyleChatter}"
                     >
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <Grid Height="110" Margin="6">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="*"/>
-                                        </Grid.ColumnDefinitions>
-                                        <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
-                                            <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Content}"/>
-                                        </Border>
-                                        <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
-                                            <TextBlock Text="{Binding Content}" Style="{StaticResource TitleTextStyle}" TextWrapping="Wrap"/>
-                                            <TextBlock Text="{Binding AuthorName}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap"/>
-                                            <TextBlock Text="{Binding CreatedDate}" Style="{StaticResource BodyTextStyle}" MaxHeight="60"/>
-                                        </StackPanel>
-                                    </Grid>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Height="110" Margin="6">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
+                                    <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Content}"/>
+                                </Border>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
+                                    <TextBlock Text="{Binding Content}" Style="{StaticResource TitleTextStyle}" TextWrapping="Wrap"/>
+                                    <TextBlock Text="{Binding AuthorName}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap"/>
+                                    <TextBlock Text="{Binding CreatedDate}" Style="{StaticResource BodyTextStyle}" MaxHeight="60"/>
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </Grid>
         </ScrollViewer>
 
