@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Diagnostics;
 using Newtonsoft.Json.Linq;
+using System.Net;
 
 // The Split Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234234
 
@@ -71,21 +72,21 @@ namespace Ch8tter
 
                 ChatterFeedItem feedItem = new ChatterFeedItem();
                 feedItem.Id = (string)itemObject["id"];
-                feedItem.Content = (string)itemObject["body"]["text"];
-                feedItem.Title = StringUtil.TruncateAtWord(feedItem.Content, 50);
-                feedItem.AuthorName = (string)itemObject["actor"]["name"];
-                feedItem.GroupName = (string)itemObject["parent"]["name"];
+                feedItem.Content = WebUtility.HtmlDecode((string)itemObject["body"]["text"]);
+                feedItem.Title = WebUtility.HtmlDecode(StringUtil.TruncateAtWord(feedItem.Content, 50));
+                feedItem.AuthorName = WebUtility.HtmlDecode((string)itemObject["actor"]["name"]);
+                feedItem.GroupName = WebUtility.HtmlDecode((string)itemObject["parent"]["name"]);
                 feedItem.CreatedDate = ((DateTime)itemObject["createdDate"]).ToString();
                 feedItem.Image = (string)itemObject["actor"]["photo"]["largePhotoUrl"]+"?oauth_token="+SFDCSession.Instance.AccessToken;
                 feedItem.Comments = new List<ChatterFeedItemComment>();
                 foreach (JObject commentObject in itemObject["comments"]["comments"])
                 {
                     ChatterFeedItemComment feedItemComment = new ChatterFeedItemComment();
-                    feedItemComment.AuthorName = (string)commentObject["user"]["name"];
+                    feedItemComment.AuthorName = WebUtility.HtmlDecode((string)commentObject["user"]["name"]);
                     feedItemComment.Id = (string)commentObject["id"];
                     feedItemComment.Image = (string)commentObject["user"]["photo"]["largePhotoUrl"] + "?oauth_token=" + SFDCSession.Instance.AccessToken;
                     feedItemComment.CreatedDate = ((DateTime)commentObject["createdDate"]).ToString();
-                    feedItemComment.Content = (string)commentObject["body"]["text"];
+                    feedItemComment.Content = WebUtility.HtmlDecode((string)commentObject["body"]["text"]);
                     feedItem.Comments.Add(feedItemComment);
                 }
 
