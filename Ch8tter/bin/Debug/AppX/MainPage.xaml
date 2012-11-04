@@ -321,7 +321,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='2'
+            <Button x:ConnectionId='3'
                 x:Name="backButton"
                               
                 IsEnabled="{Binding DefaultViewModel.CanGoBack, ElementName=pageRoot}"
@@ -330,7 +330,7 @@
             <Image HorizontalAlignment="Left" Height="100" Margin="10,30,0,0" VerticalAlignment="Top" Width="100" Source="Assets/mm.jpg"/>
         </Grid>
 
-        <!-- Vertical scrolling item list -->
+        <!-- Vertical scrolling item list for chatter posts on the left-->
         <ListView x:ConnectionId='1'
             x:Name="itemListView"
             AutomationProperties.AutomationId="ItemsListView"
@@ -365,7 +365,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <!-- Details for selected item -->
+        <!-- Details for selected post on the right -->
         <ScrollViewer
             x:Name="itemDetail"
             AutomationProperties.AutomationId="ItemDetailScrollViewer"
@@ -391,7 +391,42 @@
                     <TextBlock x:Name="itemTitle" Margin="0,-10,0,0" Text="{Binding AuthorName}" Style="{StaticResource SubheaderTextStyle}"/>
                     <TextBlock x:Name="itemSubtitle" Margin="0,0,0,20" Text="{Binding GroupName}" Style="{StaticResource SubtitleTextStyle}"/>
                 </StackPanel>
+                <!-- TextBlock for full chatter post -->
                 <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Margin="0,20,0,0" Text="{Binding Content}" Style="{StaticResource BodyTextStyle}"/>
+                <!-- Vertical scrolling item list for comments under chatter post detail on right -->
+                <ListView x:ConnectionId='2'
+                    x:Name="commentListView"
+                    AutomationProperties.AutomationId="ItemsListView"
+                    AutomationProperties.Name="Items"
+                    TabIndex="1"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    Margin="10,10,0,0"
+                    Padding="120,0,0,60"
+                    ItemsSource="{Binding Comments}"
+                    IsSwipeEnabled="False"
+                                                                     ItemContainerStyle="{StaticResource ListViewItemStyleChatter}"
+                    >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Height="110" Margin="6">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
+                                            <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Content}"/>
+                                        </Border>
+                                        <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
+                                            <TextBlock Text="{Binding Content}" Style="{StaticResource TitleTextStyle}" TextWrapping="Wrap"/>
+                                            <TextBlock Text="{Binding AuthorName}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap"/>
+                                            <TextBlock Text="{Binding CreatedDate}" Style="{StaticResource BodyTextStyle}" MaxHeight="60"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
             </Grid>
         </ScrollViewer>
 

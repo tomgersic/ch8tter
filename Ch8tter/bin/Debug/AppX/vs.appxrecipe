@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.exe">
       <PackagePath>Ch8tter.exe</PackagePath>
-      <Modified>2012-11-04T01:57:56.328</Modified>
+      <Modified>2012-11-04T02:23:05.720</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.pdb">
       <PackagePath>Ch8tter.pdb</PackagePath>
-      <Modified>2012-11-04T01:57:56.288</Modified>
+      <Modified>2012-11-04T02:23:05.684</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\packages\Newtonsoft.Json.4.5.10\lib\winrt45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -74,7 +74,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2012-10-29T05:11:47.341</Modified>
+      <Modified>2012-11-04T02:23:01.833</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>

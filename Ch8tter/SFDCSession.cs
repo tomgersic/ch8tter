@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -15,8 +16,10 @@ namespace Ch8tter
         private static volatile SFDCSession instance;
         private static object syncRoot = new Object();
 
-        public String AccessToken = "";
-        public String InstanceUrl = "";
+        public String AccessToken = "00Dd0000000dbdj!AR4AQCHA.5SvvLu6qcvPfvnSyWkF4o.LcQs1cSyclBLqDVZuX80bC_CMpJR0hMjgjMTFUDC8SOFqY4GI_9xJsWryNWLqhyXx";
+        public String InstanceUrl = "https://na14.salesforce.com";
+        //public String AccessToken = "";
+        //public String InstanceUrl = "";
         public String OrgId = "";
         public String UserId = "";
         public String ApiVersion = "v26.0";
@@ -84,6 +87,7 @@ namespace Ch8tter
                 AccessToken = decoder.GetFirstValueByName("access_token");
                 RefreshToken = decoder.GetFirstValueByName("refresh_token");
                 InstanceUrl = WebUtility.UrlDecode(decoder.GetFirstValueByName("instance_url"));
+                Debug.WriteLine("Access Token: "+AccessToken);
                 return AccessToken;
             }
             else
