@@ -62,7 +62,7 @@ namespace Ch8tter
 
             this.DefaultViewModel["Items"] = chatterFeedDataSource.Items;          
 
-            JObject responseObject = await sfdcRest.Request("GET", "chatter/feeds/news/me/feed-items");
+            JObject responseObject = await sfdcRest.Request("GET", "chatter/feeds/news/me/feed-items?pageSize=100");
 
             JArray responseItems = (JArray)responseObject["items"];
 

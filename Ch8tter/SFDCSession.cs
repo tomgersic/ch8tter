@@ -17,7 +17,7 @@ namespace Ch8tter
         private static volatile SFDCSession instance;
         private static object syncRoot = new Object();
 
-        //public String AccessToken = "00D000000000062!AQsAQLn.YF3jqk8nMKOliG5YG4188_ag1p1V1yAWTXpLsQvCX2pHeWbTTPdsGX.lVzDK6GMBko6p.qF8rbbmLh6yLuMTxV85";
+        //public String AccessToken = "00D000000000062!AQsAQGNjWZE2MEUY4e6bfNc4mWvk3FcKogEfLChW8Lo3J9n5sL0pGZnqtCvB2_XQWSnQ7MzguqY.NOqzywod6pwi_m9zGfMW";
         //public String InstanceUrl = "https://na1.salesforce.com";
         public String AccessToken = "";
         public String InstanceUrl = "";
