@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-11-04T01:57:56.863</Modified>
+      <Modified>2012-11-05T01:51:17.170</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.exe">
       <PackagePath>Ch8tter.exe</PackagePath>
-      <Modified>2012-11-04T02:55:54.438</Modified>
+      <Modified>2012-11-05T02:40:26.993</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.pdb">
       <PackagePath>Ch8tter.pdb</PackagePath>
-      <Modified>2012-11-04T02:55:54.404</Modified>
+      <Modified>2012-11-05T02:40:26.958</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\packages\Newtonsoft.Json.4.5.10\lib\winrt45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>

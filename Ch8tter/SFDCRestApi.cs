@@ -41,6 +41,17 @@ namespace Ch8tter
 
         public async Task<JObject> Request(String method, String path)
         {
+            //get session instance
+            SFDCSession session = SFDCSession.Instance;
+            
+            //build request
+            String request = session.RequestUrl + path;
+
+            return await Request(method, request, "");
+        }
+
+        public async Task<JObject> Request(String method, String request, String parameters)
+        {
             httpClient = new HttpClient();
 
             //get session instance
@@ -49,15 +60,23 @@ namespace Ch8tter
             //add access token to request header
             httpClient.DefaultRequestHeaders.Add("Authorization","OAuth " + session.AccessToken);
 
-            //build request
-            String request = session.RequestUrl + path;
-
             Debug.WriteLine("HTTP Request: "+request);
 
             try
             {
                 //send the request, get a response
-                HttpResponseMessage response = await httpClient.GetAsync(request);
+                HttpResponseMessage response;
+                if (method == "POST")
+                {
+                    HttpContent content = new StringContent(parameters);
+                    content.Headers.Remove("Content-Type");
+                    content.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
+                    response = await httpClient.PostAsync(request,content);
+                }
+                else //assume GET if unspecified
+                {
+                    response = await httpClient.GetAsync(request);
+                }
                 
                 Debug.WriteLine(response.ToString());
 

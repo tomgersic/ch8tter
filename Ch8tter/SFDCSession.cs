@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -44,10 +45,20 @@ namespace Ch8tter
                         if (instance == null)
                         {
                             instance = new SFDCSession();
+                            instance.InitializeTokens();
                         }
                     }
                 }
                 return instance;
+            }
+        }
+
+        public async void InitializeTokens()
+        {
+            RefreshToken = PersistData.GetSerializedStringValue("refresh_token");
+            if (RefreshToken != "" && RefreshToken != null)
+            {
+                AccessToken = await RefreshTokenFlow();
             }
         }
 
@@ -86,13 +97,43 @@ namespace Ch8tter
                 WwwFormUrlDecoder decoder = new WwwFormUrlDecoder(responseUri.Fragment.Replace("#", "?"));
                 AccessToken = decoder.GetFirstValueByName("access_token");
                 RefreshToken = decoder.GetFirstValueByName("refresh_token");
+                PersistData.SetSerializedValue("refresh_token", RefreshToken);
                 InstanceUrl = WebUtility.UrlDecode(decoder.GetFirstValueByName("instance_url"));
+                PersistData.SetSerializedValue("instance_url", InstanceUrl);
                 Debug.WriteLine("Access Token: "+AccessToken);
                 return AccessToken;
             }
             else
             {
                 return "";
+            }
+        }
+
+        /**
+         * Refresh the Access Token using the Refresh Token Flow
+         **/
+        public async Task<String> RefreshTokenFlow()
+        {
+            if (RefreshToken == null || RefreshToken == "")
+            {
+                RefreshToken = PersistData.GetSerializedStringValue("refresh_token");
+            }
+            if (InstanceUrl == null || InstanceUrl == "")
+            {
+                InstanceUrl = PersistData.GetSerializedStringValue("instance_url");
+            }
+            //if we don't have a refresh token, we can't do much -- return null
+            if (RefreshToken == null || RefreshToken == "")
+            {
+                return null;
+            }
+            else
+            {
+                SFDCRestApi sfdcRestApi = new SFDCRestApi();
+                JObject responseObject = await sfdcRestApi.Request("POST", "https://login.salesforce.com/services/oauth2/token", string.Format("grant_type=refresh_token&client_id={0}&refresh_token={1}", ConsumerKey, RefreshToken));
+                AccessToken = (string)responseObject["access_token"];
+                InstanceUrl = (string)responseObject["instance_url"];
+                return AccessToken;
             }
         }
     }
