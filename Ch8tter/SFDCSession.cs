@@ -45,20 +45,10 @@ namespace Ch8tter
                         if (instance == null)
                         {
                             instance = new SFDCSession();
-                            instance.InitializeTokens();
                         }
                     }
                 }
                 return instance;
-            }
-        }
-
-        public async void InitializeTokens()
-        {
-            RefreshToken = PersistData.GetSerializedStringValue("refresh_token");
-            if (RefreshToken != "" && RefreshToken != null)
-            {
-                AccessToken = await RefreshTokenFlow();
             }
         }
 
@@ -82,6 +72,13 @@ namespace Ch8tter
         {
             if (AccessToken != "")
             {
+                return AccessToken;
+            }
+
+            RefreshToken = PersistData.GetSerializedStringValue("refresh_token");
+            if (RefreshToken != "" && RefreshToken != null)
+            {
+                AccessToken = await RefreshTokenFlow();
                 return AccessToken;
             }
 

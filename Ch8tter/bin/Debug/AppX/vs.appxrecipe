@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.exe">
       <PackagePath>Ch8tter.exe</PackagePath>
-      <Modified>2012-11-05T02:40:26.993</Modified>
+      <Modified>2012-11-05T02:44:31.344</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\Ch8tter\bin\Debug\Ch8tter.pdb">
       <PackagePath>Ch8tter.pdb</PackagePath>
-      <Modified>2012-11-05T02:40:26.958</Modified>
+      <Modified>2012-11-05T02:44:31.309</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tom\documents\visual studio 2012\Projects\Ch8tter\packages\Newtonsoft.Json.4.5.10\lib\winrt45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
