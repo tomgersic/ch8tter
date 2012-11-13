@@ -1,8 +1,8 @@
 #ch8tter
-##Date: November 12, 2012
-##Version: v0.0.1
-##Author: Tom Gersic
-##URL: http://www.modelmetrics.com/tomgersic/
+###Date: November 12, 2012
+###Version: v0.0.1
+###Author: Tom Gersic
+###URL: http://www.modelmetrics.com/tomgersic/
 
 ----------
 ###Description
