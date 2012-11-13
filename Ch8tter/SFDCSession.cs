@@ -4,30 +4,64 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Security.Authentication.Web;
+using Windows.Security.Credentials;
 
 namespace Ch8tter
 {
     public sealed class SFDCSession
     {
+        const String VAULT_RESOURCE = "ch8tter credentials";
+        const string LOCAL_USER = "localUser";
+
         private static volatile SFDCSession instance;
         private static object syncRoot = new Object();
 
-        //public String AccessToken = "00D000000000062!AQsAQGNjWZE2MEUY4e6bfNc4mWvk3FcKogEfLChW8Lo3J9n5sL0pGZnqtCvB2_XQWSnQ7MzguqY.NOqzywod6pwi_m9zGfMW";
-        //public String InstanceUrl = "https://na1.salesforce.com";
         public String AccessToken = "";
         public String InstanceUrl = "";
         public String OrgId = "";
         public String UserId = "";
         public String ApiVersion = "v26.0";
         public String BasePath = "services/data";
-        private String RefreshToken = "";
         private String ConsumerKey = "3MVG9rFJvQRVOvk45r5r6Nef.ZS37y44dr3lvAmkws6ZGGKK1oWgAQFITAkAcpdI3LNd22utrzvV.ObDuSwdB";
         private String RedirectUri = "sfdc://success";
+        private PasswordVault vault = new PasswordVault();
+
+        /**
+         * Use the Windows 8 PasswordValut to get/save the Refresh Token from encrypted storage
+         **/
+        private String RefreshToken
+        {
+            get
+            {
+                try
+                {
+                    var creds = vault.FindAllByResource(VAULT_RESOURCE).FirstOrDefault();
+                    if (creds != null)
+                    {
+                        return vault.Retrieve(VAULT_RESOURCE, "localUser").Password;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+                catch (Exception e)
+                {
+                    // this exception likely means that no credentials have been stored
+                    return null;
+                }
+            }
+            set
+            {
+                vault.Add(new PasswordCredential(VAULT_RESOURCE, "localUser", value));
+            }
+        }
 
         private SFDCSession() { }
 
@@ -75,7 +109,6 @@ namespace Ch8tter
                 return AccessToken;
             }
 
-            RefreshToken = PersistData.GetSerializedStringValue("refresh_token");
             if (RefreshToken != "" && RefreshToken != null)
             {
                 AccessToken = await RefreshTokenFlow();
@@ -94,7 +127,6 @@ namespace Ch8tter
                 WwwFormUrlDecoder decoder = new WwwFormUrlDecoder(responseUri.Fragment.Replace("#", "?"));
                 AccessToken = decoder.GetFirstValueByName("access_token");
                 RefreshToken = decoder.GetFirstValueByName("refresh_token");
-                PersistData.SetSerializedValue("refresh_token", RefreshToken);
                 InstanceUrl = WebUtility.UrlDecode(decoder.GetFirstValueByName("instance_url"));
                 PersistData.SetSerializedValue("instance_url", InstanceUrl);
                 Debug.WriteLine("Access Token: "+AccessToken);
@@ -111,10 +143,6 @@ namespace Ch8tter
          **/
         public async Task<String> RefreshTokenFlow()
         {
-            if (RefreshToken == null || RefreshToken == "")
-            {
-                RefreshToken = PersistData.GetSerializedStringValue("refresh_token");
-            }
             if (InstanceUrl == null || InstanceUrl == "")
             {
                 InstanceUrl = PersistData.GetSerializedStringValue("instance_url");
