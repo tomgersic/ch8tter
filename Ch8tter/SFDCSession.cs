@@ -159,7 +159,11 @@ namespace Ch8tter
             else
             {
                 SFDCRestApi sfdcRestApi = new SFDCRestApi();
-                JObject responseObject = await sfdcRestApi.Request("POST", "https://login.salesforce.com/services/oauth2/token", string.Format("grant_type=refresh_token&client_id={0}&refresh_token={1}", ConsumerKey, RefreshToken));
+                JObject responseObject = await sfdcRestApi.Request("POST", 
+                                                                   "https://login.salesforce.com/services/oauth2/token", 
+                                                                   string.Format("grant_type=refresh_token&client_id={0}&refresh_token={1}", 
+                                                                   ConsumerKey,
+                                                                   RefreshToken));
                 AccessToken = (string)responseObject["access_token"];
                 InstanceUrl = (string)responseObject["instance_url"];
                 return AccessToken;

@@ -17,6 +17,9 @@ namespace Ch8tter
     {
         private HttpClient httpClient;
 
+        /**
+         * Some dummy data used for testing -- probably refactor this to a Unit Test at some point
+         ***/
         public void GenerateDummyData()
         {
             ChatterFeedDataSource chatterFeedDataSource = (ChatterFeedDataSource)App.Current.Resources["chatterFeedDataSource"];
@@ -39,6 +42,9 @@ namespace Ch8tter
             }
         }
 
+        /**
+         * Issue a GET or POST HTTP request to the SFDC REST API
+         **/
         public async Task<JObject> Request(String method, String path)
         {
             //get session instance
@@ -50,6 +56,9 @@ namespace Ch8tter
             return await Request(method, request, "");
         }
 
+        /**
+         * Issue a GET or POST HTTP request to the SFDC REST API -- with parameters for POST
+         ***/
         public async Task<JObject> Request(String method, String request, String parameters)
         {
             httpClient = new HttpClient();
