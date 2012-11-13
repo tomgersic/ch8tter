@@ -53,7 +53,7 @@ namespace Ch8tter
                 }
                 catch (Exception e)
                 {
-                    // this exception likely means that no credentials have been stored... whatever the reason, return null
+                    // this exception likely means that no credentials have been stored... 
                     return null;
                 }
             }
