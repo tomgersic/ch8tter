@@ -44,7 +44,7 @@ namespace Ch8tter
                     var creds = vault.FindAllByResource(VAULT_RESOURCE).FirstOrDefault();
                     if (creds != null)
                     {
-                        return vault.Retrieve(VAULT_RESOURCE, "localUser").Password;
+                        return vault.Retrieve(VAULT_RESOURCE, LOCAL_USER).Password;
                     }
                     else
                     {
@@ -59,7 +59,7 @@ namespace Ch8tter
             }
             set
             {
-                vault.Add(new PasswordCredential(VAULT_RESOURCE, "localUser", value));
+                vault.Add(new PasswordCredential(VAULT_RESOURCE, LOCAL_USER, value));
             }
         }
 
