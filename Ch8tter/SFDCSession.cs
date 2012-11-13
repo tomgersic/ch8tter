@@ -104,20 +104,24 @@ namespace Ch8tter
          **/
         public async Task<String> oAuthUserAgentFlow()
         {
+            //if we already have an Access Token, just return that
             if (AccessToken != "")
             {
                 return AccessToken;
             }
 
+            //If we have a refresh token available, use the Refresh Token flow to get a new Access Token
             if (RefreshToken != "" && RefreshToken != null)
             {
                 AccessToken = await RefreshTokenFlow();
                 return AccessToken;
             }
 
+            //prepare the request uri and the callback uri
             Uri requestUri = new Uri("https://login.salesforce.com/services/oauth2/authorize?response_type=token&display=touch&client_id="+ConsumerKey+"&redirect_uri="+WebUtility.UrlEncode(RedirectUri));
             Uri callbackUri = new Uri(RedirectUri);
 
+            //launch the authentication process using WebAuthenticationBroker
             WebAuthenticationResult webAuthenticationResult = await WebAuthenticationBroker.AuthenticateAsync(WebAuthenticationOptions.None, requestUri, callbackUri);
             if (webAuthenticationResult.ResponseStatus == WebAuthenticationStatus.Success)
             {
