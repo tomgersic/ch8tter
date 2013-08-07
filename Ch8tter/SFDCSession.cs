@@ -118,7 +118,7 @@ namespace Ch8tter
             }
 
             //prepare the request uri and the callback uri
-            Uri requestUri = new Uri("https://login.salesforce.com/services/oauth2/authorize?response_type=token&display=touch&client_id="+ConsumerKey+"&redirect_uri="+WebUtility.UrlEncode(RedirectUri));
+            Uri requestUri = new Uri("https://login.salesforce.com/services/oauth2/authorize?response_type=token&display=popup&client_id="+ConsumerKey+"&redirect_uri="+WebUtility.UrlEncode(RedirectUri));
             Uri callbackUri = new Uri(RedirectUri);
 
             //launch the authentication process using WebAuthenticationBroker
